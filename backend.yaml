@@ -41,6 +41,7 @@
     ansible.builtin.service:
       src: backend.service
       dest: /etc/systemd/system/backend.service
+      
   - name: import mysql data
     community.mysql.mysql_db:
       state: import
@@ -49,4 +50,3 @@
       login_password: ExpenseAPP@1
       login_host: mysql.daws82s.online
       target: /app/schema/backend.sql 
-      
